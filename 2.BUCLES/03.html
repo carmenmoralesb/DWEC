@@ -1,0 +1,52 @@
+<head>
+    <meta charset="UTF-8">
+    <title>03</title>
+</head>
+
+<html>
+
+<body>
+    <script type="text/javascript">
+        // ver si dos numeros son amigos
+
+        var num1 = prompt("Escribe un numero");
+        var num2 = prompt("Escribe un numero");
+
+        var suma1 = 0;
+        var suma2 = 0;
+
+        // encontrar divisores de num1 y sumar
+        for (contador= 1; contador< num1; i++) {
+            if (num1%contador== 0) {
+                suma1 = suma1 + i;
+                console.log(suma2);
+
+            }
+        }
+
+        // si es igual la suma de divisores de num1 a num2 sigo con la ejecución
+        // en este caso compruebo los divisores de num2 y los sumo
+
+
+        if (suma1 == num2) {
+            for (contador= 1; contador< num2; i++) {
+                if (num2%contador== 0) {
+                    suma2 = suma2 + i;
+                    console.log(suma2);
+
+                }
+            }
+
+        // si la suma es igual que num1 entonces son amigos, ya que la comprobación de la suma de num1 la hicimos antes
+            if (suma2 == num1) {
+                alert("Son amigos");
+        } 
+        
+        else {
+            alert("No son amigos");
+        }
+    }
+    </script>
+</body>
+
+</html>

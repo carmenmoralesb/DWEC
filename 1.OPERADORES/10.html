@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Null y undefined</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Los operadores bit a bit tratan a sus operandos como un conjunto de 
+        // 32 bits (ceros y unos), en vez de como números decimales, hexadecimales u octales.
+
+        alert(9 >> 2);
+        // retorna 2, puesto que la representación binaria de 9 es 1001 y al 
+        // ser desplazada 2 posiciones de bits hacia la derecha, da como resultado 10, cuya 
+        // representación decimal es 2
+
+        alert(9 << 2);
+        // 9<<2 retorna 36, puesto que la representación binaria de 9 es 1001 y al ser desplazado 2 posiciones 
+        //de bits hacia la izquierda, da como resultado 100100, cuya representación decimal es 36.
+
+    </script>
+</body>
+
+</html>

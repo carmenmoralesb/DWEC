@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset='UTF-8'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&display=swap' rel='stylesheet'>
+    <link href='../css/estilo.css' rel='stylesheet' type='text/css' />
+    <title>ENUMERA</title>
+    <script type='text/javascript' src='../js/01.js'></script>
+    <script type='text/javascript' src='../js/02.js'></script>
+    <script type='text/javascript' src='../js/03.js'></script>
+    <script type='text/javascript' src='../js/04.js'></script>
+    <script type='text/javascript' src='../js/05.js'></script>
+    <script type='text/javascript' src='../js/06.js'></script>
+    <script type='text/javascript' src='../js/07.js'></script>
+    <script type='text/javascript' src='../js/08.js'></script>
+</head>
+
+<body>
+    <header id='cabecera'>
+        <h1>Enumera</h1>
+    
+        <nav class='derecha'>
+            <ul>
+                <li><a href='index.html'>Inicio</li></a>
+                <li><a href='ejercicios.html'>Ejercicios</a></li>
+                <li><a href='temario.html'>Temarios</a></li>
+                <li>Consejos</li>
+            </ul>
+        </nav>
+    </header>
+        <nav id='navbar'>
+            <ul>
+                <li><a class='nav-link' href='#Introduccion'>Introducción</a></li>
+                <li>
+                    <a class='nav-link' href='#Ejercicio1'>Sumas con acarreo</a>
+                </li>
+                <li>
+                    <a class='nav-link' href='#Ejercicio2'>Números primos</a>
+                </li>
+                <li><a class='nav-link' href='#Ejercicio3'>División con restas</a></li>
+                <li><a class='nav-link' href='#Ejercicio4'>Multiplicación con sumas</a></li>
+                <li>
+                    <a class='nav-link' href='#Ejercicio5'>Cambio de base</a>
+                </li>
+                <li><a class='nav-link' href='#Ejercicio6'>Factorizar en números primos</a></li>
+                <li><a class='nav-link' href='#Ejercicio7'>Sumar los dígitos de un número</a></li>
+                <li><a class='nav-link' href='#Ejercicio8'>Ceros del factorial</a></li>
+            </ul>
+        </nav>
+        <main id='principal'>
+            <section class='seccion' id='Introduction'>
+                <header>Introducción</header>
+                <article>
+                    <p>
+                        En esta parte de la página web vas a encontrar ejercicios resueltos y explicados.
+                        Podrás probar los problemas que se te ocurran y ver una explicación de la solución para
+                        que lo entiendas mejor :).
+                    </p>
+                    <p>
+                        Para probar a ver la solución de un ejercicio sólo tienes que escribir los datos
+                        en la cajita y pinchar en enviar, ¡es muy fácil!
+                    </p>
+                </article>
+            </section>
+            <section class='seccion' id='Ejercicio1'>
+                <header>Sumas con acarreo</header>
+                <article>
+                    <p>Al sumar los valores posicionales de los números y , ninguna de las sumas es mayor que . Sin
+                        embargo,
+                        esto no siempre es así, veamos el siguiente ejemplo: realicemos la suma 8728 + 5537.</p>
+
+                    <img class="fotonormal"
+                        src='https://aprendelibvrefiles.blob.core.windows.net/aprendelibvre-container/course/sumar_y_restar/image/sumaraca1_xl.png'>
+                    <p> Como puedes ver, en las primeras unidades de cada número hay un acarreo. Esto es porque la suma
+                        de
+                        7+8 da un número mayor o igual de 10. Cuando tenemos un <b>acarreo</b> tenemos que arrastrar una
+                        unidad
+                        a la siguiente suma. En este caso sería 3+2 = 5 pero como hemos tenido un acarreo ¡se convierte
+                        en
+                        un 6!</p>
+
+                    En la caja de abajo puedes probar combinaciones para saber qué número de acarreos tendrías si
+                    sumaras
+                    dos números.
+
+                    <hr>
+                    <!-- aqui van las actividades, con formularios y boton enviar que hara un onclick() on submit -->
+                    <form>
+                        <label for='number'>Primer número</label>
+                        <input type='text' name='numero1' id='numero1'></br>
+                        <label for='numero2'>Segundo número</label>
+                        <input type='text' name='numero2' id='numero2'><br>
+                        <input class='boton' type='button' value='Calcular' onclick='return acarreo();' />
+
+                        <h2>Solución</h2>
+                        <textarea id='res1' name='res1' cols='30' rows='5'></textarea>
+                    </form>
+                </article>
+            </section>
+            <section class='seccion' id='Ejercicio2'>
+                <header>Números primos entre sí</header>
+                <article>
+                    <p>
+                        El número primo es aquél que únicamente tiene como divisores exactos (al dividirlo por ellos el
+                        resto es igual a cero) el 1 y a sí mismo.
+
+                        En cambio, el número compuesto es aquél que tiene como divisores exactos, además del 1 y de si
+                        mismo, otros números.
+
+                        Por ejemplo:
+
+                        El número 13 es primo porque sólo tiene como divisores exactos el 1 y el 13.
+                    </p>
+
+                    <p>Sabiendo esto, <b>¿cómo se si dos números son primos entre sí?</b>
+                        Los números primos entre sí o números primos relativos son dos o más números que no tienen más
+                        divisor común que 1.
+
+                        El mayor divisor común o máximo común divisor de varios números primos entre si es 1. Así, 8 y
+                        15
+                        son primos entre si o primos relativos porque su único factor común es 1, porque 8 es divisible
+                        por
+                        2, pero 15 no, y 15 es divisible por 3 y por 5, pero 8 no.
+
+                        Ahora, sin utilizar las cajas de abajo, ¿son el número 7 y el número 12 primos entre si?
+                    </p>
+                    <form>
+                        <label for='primo1'>Primer número</label>
+                        <input type='text' name='primo1' id='primo1'></br>
+                        <label for='primo2'>Segundo número</label>
+                        <input type='text' name='primo2' id='primo2'><br>
+                        <input class='boton' type='button' value='Calcular' onclick='return primos();' />
+
+                        <h2>Solución</h2>
+                        <textarea id='res2' name='res2' cols='30' rows='5'></textarea>
+                    </form>
+
+                </article>
+            </section>
+            <section class='seccion' id='Ejercicio3'>
+                <header>División con restas sucesivas</header>
+                <article>
+                    <p>¿Sabías que puedes dividir dos números mediante restas sucesivas? Es muy sencillo.
+                        Veamos un ejemplo.
+
+                        ¿Como dividiríamos 15/4 utilizando restas? Tan sólo debemos restar el divisor al dividendo
+                        tantas veces como nos sea posible, es decir, hasta que el divisor (el número de la izquierda)
+                        sea menor que el dividendo (derecha). Veamos: </p>
+
+                    <ul>
+                        <li>15 - 4 = 11 </li>
+                        <li>11 - 4 = 7 </li>
+                        <li>7 - 4 = 3 </li>
+                    </ul>
+
+                    <p>¡¡NO PODEMOS RESTAR MÁS!! Esto nos deja que el resto de esta divisón es 3 y el cociente es
+                        también 3.
+                    </p>
+
+                    <hr>
+                    <form>
+                        <label for='dividendo'>Dividendo</label>
+                        <input type='text' name='dividendo' id='dividendo'></br>
+                        <label for='divisor'>Divisor</label>
+                        <input type='text' name='divisor' id='divisor'><br>
+                        <input class='boton' type='button' value='Calcular' onclick='return dividir();' />
+
+                        <h2>Solución</h2>
+                        <textarea id='res3' name='res3' cols='30' rows='5'></textarea>
+                    </form>
+
+                    </p>
+                </article>
+            </section>
+            <section class='seccion' id='Ejercicio4'>
+                <header>Multiplicación con sumas</header>
+                <p>
+                    ¿Sabías que puedes hacer una multiplicación con sumas sucesivas?
+                    Al igual que hicimos anteriormente con la división, una multiplicación se puede hacer solo
+                    realizando
+                    varias sumas. Además en este caso como <b>el orden de los factores no altera el producto</b> podemos
+                    hacerlo
+                    en el orden que queramos
+                </p>
+                <p>
+                    Por ejemplo 3 x 4 es 12, pero ¿cómo lo haríamos sumando?
+                    <ul>
+                        <li>3 + 3 + 3 + 3 = 12</li>
+                    </ul>
+                </p>
+                <hr>
+                <form>
+                    <label for='fac1'>Factor 1</label>
+                    <input type='text' name='fac1' id='fac1'></br>
+                    <label for='fac2'>Factor 2</label>
+                    <input type='text' name='fac2' id='fac2'><br>
+                    <input class='boton' type='button' value='Calcular' onclick='return multiplicar();' />
+
+                    <h2>Solución</h2>
+                    <textarea id='res4' name='res4' cols='30' rows='5'></textarea>
+                </form>
+            </section>
+            <section class='seccion' id='Ejercicio5'>
+                <header>Cambio de base</header>
+                <article> El sistema decimal (formado por diez símbolos) es el que más utilizamos diariamente y el que
+                    más
+                    conocemos, pero ¿cómo pasar de base decimal a otras bases?
+
+                    <ul>
+                        <li> Base binaria:
+                            <p>Para hacer la conversión de decimal a binario, hay que ir dividiendo el número decimal
+                                entre
+                                dos y anotar en una columna a la derecha el resto (un 0 si el resultado de la división
+                                es
+                                par y un 1 si es impar).<p>
+                                    <img
+                                        src='https://lh4.googleusercontent.com/sbjq-ic8pax4DOruwj2qiN62a4ozbmncV7-qFJ4d9AMsw3brjIcvWkpUc50DnjkHnr_uno3u15nofQaF1OXrva45aB6up-Qv-OJjOYoN-8wiQdE5CKtmdMrT5CxE9dZhJyLwPkkI'>
+                        </li>
+                        <li> Base octal:
+                            <p>El sistema de numeración posicional cuya base es 8, se llama octal y utiliza los dígitos
+                                indio arábigos: 0,1,2,3,4,5,6,7 </p>
+
+                            <img src='https://www.matesfacil.com/ESO/sistemas-numeracion/base-octal/OctalP9-1.png'>
+                        </li>
+                        <li> Base hexadecimal:
+                            <p>El sistema hexadecimal es un método de numeración posicional que utiliza como base el
+                                número
+                                16 (Base-16), es decir, que existen 16 símbolos de dígitos posibles. La forma de pasar
+                                de
+                                decimal
+                                a hexadecimal es igual a las anteriores, con la diferencia de que a partir del número
+                                10,
+                                los valores
+                                pasan a ser letras del abecedario. En la tabla de abajo tienes la referencia: <p>
+
+                                    <table id='tablahex'>
+                                        <tr>
+                                            <td><b>DECIMAL<b></td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>HEXADECIMAL</b></td>
+                                            <td>A</td>
+                                            <td>B</td>
+                                            <td>C</td>
+                                            <td>D</td>
+                                            <td>E</td>
+                                            <td>F</td>
+                                        </tr>
+                                    </table>
+                                    <p>Así que si en la conversión tenemos un resto mayor que 10 debemos cambiar ese
+                                        resto
+                                        porque
+                                        su caracter equivalente.
+                                    </p>
+                        </li>
+                        <hr>
+                        <form>
+                            <label for='decimal'>Número decimal</label>
+                            <input type='text' name='decimal' id='decimal'></br>
+                            <label for='base'>Base</label>
+                            <input type='text' name='base' id='base'><br>
+                            <input class='boton' type='button' value='Calcular' onclick='return cambiobase();' />
+
+                            <h2>Solución</h2>
+                            <textarea id='res5' name='res5' cols='30' rows='5'></textarea>
+                        </form>
+                </article>
+            </section>
+            <section class='seccion' id='Ejercicio6'>
+                <header>Factorizar números primos</header>
+                <article>
+                    <p> Ya hemos visto antes lo que es un número primo, ahora nos toca factorizar un número en-US
+                        factores primos.</p>
+
+                    <p> <b>¿Qué es factorizar?</b> <br> <br>
+                        La factorización o descomposición factorial es el proceso de presentar una expresión matemática
+                        o un
+                        número en forma de multiplicación. Recordemos que los factores son los elementos de la
+                        multiplicación y el resultado se conoce como producto.
+
+                        'Factorizar en primos' es averiguar qué numeros primos tienes que multiplicar juntos para
+                        obtener el
+                        número original. </p>
+
+                    <p><b>¿Cuáles son los factores primos de 12? </b><br>
+
+                        Es mejor empezar por el número primo más pequeño, que es 2, así que comprobamos:<br>
+
+                        12 ÷ 2 = 6 <br>
+
+                        Pero 6 no es primo así que tenemos que factorizarlo también:<br>
+
+                        6 ÷ 2 = 3 <br>
+
+                        Y 3 es primo, así que:<br>
+
+                        12 = 2 × 2 × 3 <br>
+
+                        Como ves, cada factor es un número primo, así que la respuesta es correcta - la factorización en
+                        primos de 12 es 2 × 2 × 3. ¿Cuáles serán los factores primos de 21?
+                    </p>
+                    <hr>
+                    <form>
+                        <label for='numfacto'>Número a factorizar</label>
+                        <input type='text' name='numfacto' id='numfacto'></br>
+                        <input class='boton' type='button' value='Calcular' onclick='return facprimos();' />
+
+                        <h2>Solución</h2>
+                        <textarea id='res6' name='res6' cols='30' rows='5'></textarea>
+                    </form>
+
+                </article>
+            </section>
+            <section class='seccion' id='Ejercicio7'>
+                <header>Sumar dígitos de un número</header>
+                <article>
+                    <p> Suma los dígitos del número que quieras con las cajas de abajo. Para practicar la suma
+                        puedes utilizar números con muchas cifras. ¿Cuál será la suma de los digitos de 3433?
+                    </p>
+                    <hr>
+                    <form>
+                        <label for='sumadig'>Número para sumar dígitos</label>
+                        <input type='text' name='sumadig' id='sumadig'></br>
+                        <input class='boton' type='button' value='Calcular' onclick='return sumanum();' />
+
+                        <h2>Solución</h2>
+                        <textarea id='res7' name='res7' cols='30' rows='5'></textarea>
+                    </form>
+                </article>
+            </section>
+            <section class='seccion' id='Ejercicio8'>
+                <header>Ceros en el factorial</header>
+                <article>
+                    <p>
+                        La función factorial (símbolo: !) sólo quiere decir que se multiplican una serie de números que
+                        descienden. Ejemplos:
+                    </p>
+                    <ul>
+                        <li>4! = 4 × 3 × 2 × 1 = 24</li>
+                        <li>7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040</li>
+                    </ul>
+                    <p>
+                        En esta actividad vamos a contar los ceros del factorial de un número. Por ejemplo
+                        el factorial de 5 sería
+                    </p>
+
+                    <ul>
+                        <li>5 x 4 x 3 x 2 x 1 = 120</li>
+                    </ul>
+
+                    <p> El factorial de 5 tiene entonces un solo 0, ¿Cuántos tendrá el factorial de 20 al final?</p>
+                    <hr>
+                    <form>
+                        <label for='cerofacto'>Número para sumar dígitos</label>
+                        <input type='text' name='cerofacto' id='cerofacto'></br>
+                        <input class='boton' type='button' value='Calcular' onclick='return cerofac();' />
+
+                        <h2>Solución</h2>
+                        <textarea id='res8' name='res8' cols='30' rows='5'></textarea>
+                    </form>
+                </article>
+            </section>
+        </main>
+</body>
+
+</html>

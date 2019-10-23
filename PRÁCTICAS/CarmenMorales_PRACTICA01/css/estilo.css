@@ -1,0 +1,187 @@
+html,
+body {
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+p {
+  color:#6B6C70;
+}
+
+#pie {
+  /* footer sticky al bottom */
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  background-color: #e7585c;
+}
+
+#pie p {
+  font-size: 15px;
+  color: black;
+  float: right;
+  margin: 0px 20px 0px 0px;
+}
+
+#pie img {
+  float: left;
+  height: 40px;
+}
+
+#cabecera {
+  background-color: #e7585c;
+  height: 20%;
+  text-align: left;
+  font-size: 1.8em;
+  width: 100%;
+  font-weight: thin;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 20px 0px;
+  font-family: "Pacifico", cursive;
+}
+
+header {
+  background-color: #e7585c;
+  height: 20%;
+  text-align: left;
+  font-size: 40px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 20px 0px;
+  font-family: "Pacifico", cursive;
+}
+
+.derecha {
+  color: white;
+  margin: 30px 20px;
+  font-weight: thin;
+}
+
+.derecha li {
+  list-style: none;
+  display: inline;
+  padding: 20px;
+}
+
+#navbar {
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  border-right: dotted;
+  float: left;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+.fotonormal {
+  height: 300px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.descarga a:hover,
+a:active,
+a:visited {
+  color: #4d4e53;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar li:before {
+  content: "\1F4DA";
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:active,
+a:visited {
+  color: white;
+}
+
+#principal {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.seccion article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+.seccion li {
+  list-style-type: none;
+}
+
+.seccion li:before {
+  content: "\1F95E";
+  margin-left: -20px;
+  margin-right: 10px;
+}
+
+form {
+  margin: 20px 0px 20px 0px;
+}
+
+form label,
+input {
+  margin: 0px 0px 20px 0px;
+}
+
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100px;
+  margin: 30px 0px 20px 0px;
+}
+
+.recta {
+  max-width: 100%;
+  height: auto;
+}

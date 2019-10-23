@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <title>05</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // mostrar la secuencia de Collatz por pantalla
+
+        var numero = prompt("Elige un número");
+        var salida ="";
+
+        while (numero > 1) {
+
+            // mientras que numero sea mayor que 1 (la secuenciasiempre termina ne 1)
+
+            if (numero % 2==0) {
+               numero = parseInt(numero / 2)
+               salida = salida + numero + ", "
+            }
+
+            // si numero es par lo divido entre 2
+            // si no es par multiplico * 3 y sumo 1
+            else {
+                numero= parseInt(numero*3 + 1)
+                salida = salida + numero + ", "
+            }
+        }
+        
+       document.write(salida);
+
+    </script>
+</body>
+
+</html>

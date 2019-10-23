@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // Concretamente, la sentencia break permite terminar de forma 
+        // abrupta un bucle y la sentencia continue permite saltarse algunas repeticiones del bucle
+
+        var suma = 0;
+
+        while (true) {
+            var num = prompt("Escribe algo");
+
+            if (num != 0) {
+                suma += parseInt(num);
+                continue; // volvemos a la ejecución del while
+            } else {
+                break; // salimos para mostrar la suma
+            }
+        }
+
+        console.log(suma);
+    </script>
+</body>
+
+</html>

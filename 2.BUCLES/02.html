@@ -1,0 +1,52 @@
+<head>
+    <meta charset="UTF-8">
+    <title>02</title>
+</head>
+
+<html>
+
+<body>
+    <script type="text/javascript">
+        /*Realiza un programa que pida continuamente una cadena y un número al usuario y
+        compruebe, usando una estructura switch, de qué cadena se trata. Si se trata de la
+        cadena “primo”, debe mostrar un mensaje indicando si el número es primo. Si se trata
+        de la cadena “divisible”, debe mostrar un mensaje indicando si el número es divisible
+        entre 3. En otro caso, debe mostrar mensaje de error y finalizar.*/
+
+        var seguir = true;
+
+        while (seguir == true) {
+            var cadena = prompt("Escribe una cadena");
+            var numero = prompt("Escribe un numero ");
+            
+            switch (cadena) {
+                case 'primo':
+                    for (contador = 0; contador < numero; contador++)
+                        if (numero % contador != 0) {
+                            alert("Es primo");
+                            break;
+                        } else {
+                            alert("No es primo");
+
+                        }
+                    break;
+
+                case 'divisible':
+                    if (numero % 3 == 0) {
+                        alert("Es divisible");
+                        break;
+
+                    } else {
+                        alert("No es divisible");
+                        break;
+                    }
+                    default:
+                        alert("error");
+                        seguir = false;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

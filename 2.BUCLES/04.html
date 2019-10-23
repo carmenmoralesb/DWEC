@@ -1,0 +1,25 @@
+<head>
+    <meta charset="UTF-8">
+    <title>04</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // mostrar asterisco por pantalla
+
+        var filas = prompt("Elige el numero de filas");
+        var salida = "";
+
+        // por cada numero mayor que 1 y menor que el numero de filas
+        for (contador1 = 1; contador1 <= filas; contador1++) {
+            // para cada numero meno o igual q elcontador 1 añado un asterisco
+            for (contador2 = 1; contador2 <= contador1; contador2++) {
+                salida += '*'
+            }
+            salida += "<br>" // el numero de espacios es como el numero de filas
+        }
+        document.write(salida);
+    </script>
+</body>
+
+</html>

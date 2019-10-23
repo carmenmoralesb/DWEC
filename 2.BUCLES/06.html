@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var numero = prompt("Escribe un numero");
+        var sumacubo = 0;
+
+        while (numero>0) {
+            sumacubo = sumacubo + ((numero % 10) ** 3)
+            console.log(numero);
+            console.log(numero%10);
+            // me quedo con el resto, en este caso en la primera iteración
+            // sería "3", la parte decimal
+
+            numero = parseInt(numero / 10)
+            // voy dividiendo quedandome con la parte entera hasta que sea menor q no sea mayor q cero
+        }
+    </script>
+</body>
+
+</html>
