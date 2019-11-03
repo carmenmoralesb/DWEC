@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Null y undefined</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+var arr = [3,4,2,5,1]
+console.log(arr);
+
+for (i = 0; i < arr.length; i++) {
+    var actual = arr[i];
+    for (j = i - 1; j >= 0 && (arr[j] > actual); j--) {
+        arr[j+1] = arr[j];
+    }
+    arr[j+1] = actual
+}
+console.log(arr);
+</script>
+</html>
