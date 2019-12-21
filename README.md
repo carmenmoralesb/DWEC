@@ -1,18 +1,34 @@
 # DESARROLLO WEB ENTORNO CLIENTE
+
 ## Curso 2019/2020
 
 Ejercicios de la asignatura Desarrollo entorno cliente para el CFGS Desarrollo de aplicaciones Web.
 
 ### Temario
 
-<ul>
-  <li>1. First Item</li>
-  <li>2. Second Item
-    <ul>
-    <li>2.1 Second Item Sub Item 1 </li>
-    <li>2.2 Second Item Sub Item 2</li>
-    <li>2.3 Second Item Sub Item 3</li>
-    </ul>
+<ol>
+  <li>UD01 - La web
+  <ol>
+  <li>Los navegadores</li>
+  <li>Inspector de código y depuración</li>
+  </ol>
   </li>
-  <li>3 Third Item </li>
-</ul>
+
+  <li>UD02 - Fundamentos de Javascript
+  <ol>
+  <li>Operadores</li>
+  <li>Bucles</li>
+  </ol>
+  </li>
+
+  <li>UD03 - Objetos Built-in de Javascript
+  <ol>
+  <li>Cadenas</li>
+  <li>Math y DATE</li>
+  <li>Arrays y matrices</li>
+  </ol>
+  </li>
+  
+  <li>UD04 - Programación Orientada a Objetos en Javascript</li>
+  <li>UD05 - El DOM</li>
+</ol>
