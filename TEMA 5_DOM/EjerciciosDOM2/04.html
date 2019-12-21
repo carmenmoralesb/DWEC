@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        function validarForm() {
+            var errores = document.getElementsByClassName('error');
+            
+            while (errores[0]) {
+                errores[0].parentNode.removeChild(errores[0]);
+            }
+
+            var mensajes = []
+            //var patronpassword = /[^\w\s]/
+
+            var nombre = document.forms["miform"]["nombre_usuario"].value;
+            var edad = document.forms["miform"]["edad"].value;
+            var password = document.forms["miform"]["password"].value;
+            var mayoredad = document.forms["miform"]["mayoredad"].value;
+
+            if (nombre == "") {
+                mensajes.push("El nombre no puede estar vacío");
+            }
+
+            if (nombre.length > 10) {
+                mensajes.push("El nombre no puede tener más de 10 caracteres")
+            }
+
+            if (!edad || isNaN(edad)) {
+                mensajes.push("Por favor escribe una edad");
+            }
+
+            if (password.length < 8) {
+                mensajes.push("Por favor escribe una contraseña de más de 8 caracteres");
+            }
+
+            if (password.length >= 8) {
+                for (i = 0; i <= password.length; i++) {
+                    check_mayus = 0;
+                    check_minus = 0;
+                    check_simbolos = 0;
+                    check_num = 0;
+
+
+                    if (password[i].charCodeAt() >= 65 && password[i].charCodeAt() <= 90) {
+                        check_mayus += 1;
+                    }
+
+                    if (password[i].charCodeAt() >= 97 && password[i].charCodeAt() <= 122) {
+                        check_minus += 1;
+                    }
+
+                    if (password[i].charCodeAt() >= 33 && password[i].charCodeAt() <= 64) {
+                        check_simbolos += 1;
+                    }
+
+                    if (password[i].charCodeAt() >= 48 && password[i].charCodeAt() <= 57) {
+                        check_num += 1;
+                    }
+
+                    if (check_mayus == 0 || check_minus == 0 || check_simbolos || check_num) {
+                        mensajes.push("Por favor escribe una contraseña con mayúsculas,minúsculas,dígitos y símbolos")
+                    }
+                }
+
+                if (mayoredad == true && edad < 18) {
+                    mensajes.push("Desmarca la casilla, no eres mayor de edad");
+                }
+
+                if (mensajes.length > 0) {
+                    for (i = 0; i < mensajes.length; i++) {
+                        var mensajeerror = document.createElement('p');
+                        mensajeerror.className = 'error';
+                        document.body.appendChild(mensajeerror);
+                        mensajeerror.innerText = (mensajes[i]);
+                        mensajeerror.style.color = "red";
+                    }
+                    return false
+                }
+
+                else {
+                    return true
+                }
+            }
+        }
+    </script>
+    <form id="miform" onsubmit="return validarForm()" method="post">
+        <label for="nombre_usuario">Nombre de usuario</label>
+        <input type="text" name="nombre_usuario"><br><br>
+        <label for="edad" name="edad">Edad</label>
+        <input type="number" name="edad"><br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password"><br><br>
+        <label for="mayoredad" name="mayoredad">Soy mayor de edad</label>
+        <input name="mayoredad" type="checkbox"><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>

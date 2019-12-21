@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function anadirInputTexto() {
+            //var formcrear = document.createElement('form');
+            var nombre = prompt('Escribe el nombre del input:');
+
+            //console.log(nombre);
+            var label = document.createElement('label');
+            document.forms[0].appendChild(label);
+            label.value = nombre;
+            label.for = nombre;
+            label.innerText = (nombre);
+            label.style.marginRight = '5px';
+
+            var input = document.createElement('input');
+            document.forms[0].appendChild(input);
+            input.name = nombre;
+            input.type = "text";
+            salto = document.createElement("br");
+            document.forms[0].appendChild(salto);;
+
+        }
+
+        function anadirInputPassword() {
+            //var formcrear = document.createElement('form');
+            var nombre = prompt('Escribe el nombre del input:');
+
+            //console.log(nombre);
+            var label = document.createElement('label');
+            document.forms[0].appendChild(label);
+            label.value = nombre;
+            label.for = nombre;
+            label.innerText = (nombre);
+            label.style.marginRight = '5px';
+
+            var input = document.createElement('input');
+            document.forms[0].appendChild(input);
+            input.name = nombre;
+            input.type = "password";
+            input.style.marginTop = '5px';
+            salto = document.createElement("br");
+            document.forms[0].appendChild(salto);
+        }
+
+        function anadirInputTextArea() {
+            //var formcrear = document.createElement('form');
+            var nombre = prompt('Escribe el nombre del input:');
+
+            //console.log(nombre);
+            var label = document.createElement('label');
+            document.forms[0].appendChild(label);
+            label.value = nombre;
+            label.for = nombre;
+            label.innerText = (nombre);
+            label.style.marginRight = '5px';
+
+
+            var input = document.createElement('textarea');
+            document.forms[0].appendChild(input);
+            input.name = nombre;
+            input.type = "textarea";
+            input.style.marginTop = '5px';
+
+            salto = document.createElement("br");
+            document.forms[0].appendChild(salto);
+        }
+
+        function anadirInputImagen() {
+            //var formcrear = document.createElement('form');
+            var nombre = prompt('Escribe la ruta de la imagen');
+
+            //console.log(nombre);
+            var label = document.createElement('label');
+            document.forms[0].appendChild(label);
+            label.value = nombre;
+            label.for = nombre;
+            label.innerText = (nombre);
+            label.style.marginRight = '5px';
+
+
+            var input = document.createElement('img');
+            document.forms[0].appendChild(input);
+            input.name = nombre;
+            input.src = nombre;
+            input.style.marginTop = '5px';
+
+            salto = document.createElement("br");
+            document.forms[0].appendChild(salto);
+        }
+
+        function anadirInputSubmit() {
+            //var formcrear = document.createElement('form');
+            var nombre = prompt('Escribe el atributo name');
+            var valor = prompt('Escribe el atributo value')
+
+            //console.log(nombre);
+
+            var input = document.createElement('input');
+            document.forms[0].appendChild(input);
+            input.name = nombre;
+            input.type = "submit";
+            input.value = valor;
+            input.style.marginTop = '5px';
+
+            salto = document.createElement("br");
+            document.forms[0].appendChild(salto);
+        }
+    </script>
+
+    <table border="1px" id="tabla">
+        <tr>
+            <td><button class="texto" onclick="anadirInputTexto();" value="boton">Texto</button>
+            <td><button class="password" onclick="anadirInputPassword();" value="boton">Password</button>
+            <td><button class="textarea" onclick="anadirInputTextArea();" value="boton">TextArea</button>
+            <td><button class="imagen" onclick="anadirInputImagen();" value="boton">Imagen</button>
+            <td><button class="boton" onclick="anadirInputSubmit();" value="boton">Submit</button>
+            </td>
+            <td></td>
+        </tr>
+    </table><br>
+    <form id="formulario">
+    </form>
+</body>

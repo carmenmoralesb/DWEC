@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function crearTabla() {
+            var tabla = document.getElementById('tabla');
+            var formulario = document.getElementById('miform');
+            var entradas = formulario.getElementsByTagName('input');
+            var labels = formulario.getElementsByTagName('label');
+
+            var cabeceras = [];
+            var valores = [];
+            var num_fila = document.getElementById("tabla").rows.length;
+
+            if (num_fila == 0) {
+                var fila = tabla.insertRow();
+
+                for (i = 0; i < labels.length; i++) {
+                    cabeceras.push(labels[i].textContent)
+                }
+
+                for (i = 0; i < cabeceras.length; i++) {
+                    var celda = fila.insertCell();
+                    var texto = document.createTextNode(cabeceras[i]);
+                    celda.appendChild(texto);
+                }
+            }
+            else {
+                for (i = 0; i < entradas.length; i++) {
+                    var valor = formulario.getElementsByTagName('input')[i].value
+                    valores.push(valor);
+                    var fila = tabla.insertRow();
+                }
+
+                for (i = 0; i < valores.length; i++) {
+                    var celda = fila.insertCell();
+                    var texto = document.createTextNode(valores[i]);
+                    celda.appendChild(texto);
+                }
+            }
+        }
+
+
+    </script>
+
+    <form id="miform" method="POST" action=".">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre"><br><br>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos"><br><br>
+        <label for="edad">Edad</label>
+        <input type="number" name="edad"><br><br>
+        <label for="profesion">Profesión</label>
+        <input type="text" name="profesion"><br><br>
+
+    </form>
+    <button onclick="crearTabla();" value="boton">Generar tabla</button><br><br>
+    <table id="tabla" border="1px">
+    </table>
+</body>
+</table>

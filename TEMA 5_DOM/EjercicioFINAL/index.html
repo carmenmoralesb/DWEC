@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script type="text/javascript" src="generar.js"></script>
+</head>
+
+<body>
+    <div id="cargando">
+    <img src="loading.gif">
+    </div>
+    <div id="container">
+        <div class="caja caja1"></div>
+        <div class="caja caja2"></div>
+        <div class="caja caja3"></div>
+        <div class="caja caja4"></div>
+        <div class="caja caja5"></div>
+    </div>
+
+    <div class="botones">
+        <button onclick="return Generar()" type="button">Generar</button>
+        <button onclick="return Ordenar()" type="button">Ordenar</button>
+
+        <div class="radio">
+            <div class="radio_boton"><input id="desc" type="radio" name="ordenar" value="descendente"> Ordenar
+                descendentemente</div>
+            <div class="radio_boton"><input id="asc" type="radio" name="ordenar" value="ascendente"> Ordenar
+                ascendentemente</div>
+        </div>
+    </div>
+</body>
+
+</html>

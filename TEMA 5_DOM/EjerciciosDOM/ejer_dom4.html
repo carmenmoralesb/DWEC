@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4</title>
+  <link rel="stylesheet" type="text/css" href="reloj.css">
+  <script type="text/javascript">
+    function escribe_reloj() {
+
+      // obtengo la fecha actual creando el objeto Date
+      var fecha_actual = new Date();
+      var hora = fecha_actual.getHours();
+      var minuto = fecha_actual.getMinutes();
+      var segundo = fecha_actual.getSeconds();
+
+
+      if (hora < 12) {
+        var ap = "<span>AM</span>"
+      }
+
+      else {
+        var ap = "<span>PM</span>";
+      }
+
+      if (hora < 10) {
+        hora = '0' + hora
+      }
+      if (minuto < 10) {
+        minuto = '0' + minuto
+      }
+
+      if (segundo < 10) {
+        segundo = '0' + segundo
+      }
+
+
+      // obtengo el elemento con id reloj y le doy el valor del reloj 
+      document.getElementById("reloj").innerHTML = hora + ":" + minuto + ":" + segundo + " " + ap;
+      // obtengo el elemento con id dia de la semana y le doy el valor de date
+      //funcion anonima para ir actualizando la página
+      var dias = ['DOM', 'LUN', 'MAR', 'MIE', 'JUE', 'VIE', 'SAB'];
+      var dia_semana_actual = dias[fecha_actual.getDay()]
+      var date = dia_semana_actual;
+      document.getElementById("dia_semana").innerHTML = date;
+      setInterval(function () { escribe_reloj() }, 1000);
+    }
+
+function reloj () {
+  escribe_reloj();
+}
+
+  </script>
+</head>
+
+<body onload="reloj()">
+  <div id="contendor_reloj">
+    <div class="reloj-wrapper">
+      <div id="reloj"></div>
+      <div id="dia_semana"></div>
+    </div>
+  </div>

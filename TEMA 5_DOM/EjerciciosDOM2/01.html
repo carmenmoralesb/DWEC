@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+</head>
+
+<script type="text/javascript">
+    function crearParrafo() {
+        formulario = document.forms[0].elements[0].value;
+        //console.log(formulario);
+        //console.log(formulario);
+
+        var parrafo = document.createElement("p");
+        var texto = document.createTextNode(formulario);
+        parrafo.appendChild(texto);
+        document.body.appendChild(parrafo);
+    }
+</script>
+
+<body>
+<form id ="area" method="POST" action=".">
+<label for="parrafo">Parrafo</label>
+<input type="textarea">
+</form>
+<button onclick="crearParrafo();" value="boton">Crear párrafo</button>
+</body>

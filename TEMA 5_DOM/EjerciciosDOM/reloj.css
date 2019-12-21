@@ -1,0 +1,33 @@
+body {
+background: darkorchid;
+}
+
+.reloj-wrapper {
+    display:flex;
+    flex-direction: column;
+    width: 40%;
+    text-align:center;
+    margin:0 auto;
+    margin-top:15%;
+}
+
+#reloj{
+    background-color: #333;
+    font-family: sans-serif;
+    font-size:50px;
+    color:#fff;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+}
+
+
+#dia_semana {
+    font-size:14px;
+    opacity: 0.8;
+    display:flex;
+    flex-direction: row;
+    list-style: none;
+    filter: alpha(opacity=60);
+    font-family:arial,sans-serif;
+    color:#fff;
+}

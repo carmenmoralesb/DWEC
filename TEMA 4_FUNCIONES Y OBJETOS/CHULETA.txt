@@ -1,0 +1,9 @@
+CREACION DE UN TIPO DE DATO EN JAVASCRIPT
+
+function Diputado( atr1 = default,  atr2 = default,  atr3 = default,  atr4 = default) {
+    this. atr1 =  atr1;
+    this. atr2 =  atr2;
+    this. atr3 = comprobar atr3( atr3);
+    this. atr4 =  atr4;
+
+    atributo_no_visible = []
