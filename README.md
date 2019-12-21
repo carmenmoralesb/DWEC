@@ -5,22 +5,23 @@ Ejercicios de la asignatura Desarrollo entorno cliente para el CFGS Desarrollo d
 
 ### Temario
 
-1.UD01 - La web
-            1.Los navegadores
-            2.El inspector de código
+* ### La web
+    1.Los navegadores
+    2.El inspector de código
+    3.Depuración
 
-2.UD02 - Fundamentos de Javascript
-    1.Operadores
-    2.Bucles
+* ### Fundamentos de Javascript
+    1. Operadores
+    2. Bucles
 
-3. UD 03 - Funciones y objetos built-in de Javascript
-  3.1.Cadenas
-  3.2. Math y date
-  3.3. Arrays y matrices
+* ### Funciones y objetos Built-in de Javascript
+    1.Cadenas
+    2.Math y Date
+    3. Arrays y matrices
 
-4. UD 04 - Funciones y objetos
-   4.1. Objetos, métodos y atributos
-   4.2. Herencia
+* ### Funciones y objetos
+    1.Objetos,métodos y atributos
+    2.Herencia
 
-5. DOM (Document Object Model)
+* ### DOM (Document Object Model)
   
