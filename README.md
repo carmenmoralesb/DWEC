@@ -1,34 +1,18 @@
-# DESARROLLO WEB ENTORNO CLIENTE
+## DESARROLLO WEB ENTORNO CLIENTE 👋🏻 2019-2020
 
-## Curso 2019/2020
 
-Ejercicios de la asignatura Desarrollo entorno cliente para el CFGS Desarrollo de aplicaciones Web.
+#### 🔹 UD01 - La web
+* Los navegadores
+* Inspector de código y depuración
 
-### Temario
+#### 🔹 UD02 - Fundamentos de Javascript
+* Operadores
+* Bucles
 
-<ol>
-  <li>UD01 - La web
-  <ol>
-  <li>Los navegadores</li>
-  <li>Inspector de código y depuración</li>
-  </ol>
-  </li>
+#### 🔹 UD03 - Objetos Built-in de Javascript
+* Cadenas
+* Math y DATE
+* Arrays y matrices
 
-  <li>UD02 - Fundamentos de Javascript
-  <ol>
-  <li>Operadores</li>
-  <li>Bucles</li>
-  </ol>
-  </li>
-
-  <li>UD03 - Objetos Built-in de Javascript
-  <ol>
-  <li>Cadenas</li>
-  <li>Math y DATE</li>
-  <li>Arrays y matrices</li>
-  </ol>
-  </li>
-  
-  <li>UD04 - Programación Orientada a Objetos en Javascript</li>
-  <li>UD05 - El DOM</li>
-</ol>
+#### 🔹 UD04 - Programación Orientada a Objetos en Javascript</li>
+* UD05 - El DOM
